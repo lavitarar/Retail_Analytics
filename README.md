@@ -1,31 +1,24 @@
 # 🛒 Retail Analytics Data Engineering Project
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
-![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-orange?style=for-the-badge&logo=apachespark)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-Processing-red?style=for-the-badge&logo=apachespark)
-![SQL](https://img.shields.io/badge/SQL-Database-blue?style=for-the-badge&logo=mysql)
+![PySpark](https://img.shields.io/badge/PySpark-Data%20Engineering-orange?style=for-the-badge&logo=apachespark)
+![ETL](https://img.shields.io/badge/ETL-Pipeline-green?style=for-the-badge)
+![Medallion](https://img.shields.io/badge/Medallion-Architecture-gold?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black?style=for-the-badge&logo=github)
-![VS Code](https://img.shields.io/badge/VS%20Code-IDE-blue?style=for-the-badge&logo=visualstudiocode)
 
 ---
 
 # 📌 Project Overview
 
-This project demonstrates an **end-to-end Retail Analytics Data Engineering Pipeline** built using **Python and Apache Spark**.
+This project demonstrates an end-to-end Retail Analytics Data Engineering Pipeline built using PySpark.
 
-The pipeline follows the **Medallion Architecture (Bronze → Silver → Gold)** approach used in modern enterprise data platforms.
+The objective of this project is to process raw retail transaction data and transform it into clean, trusted, and business-ready datasets using the Medallion Architecture (Bronze → Silver → Gold).
 
-The objective is to transform raw retail transaction data into clean, validated, and business-ready datasets that can be used for reporting, dashboards, and business decision-making.
+The project simulates a real-world data engineering workflow where raw operational data is ingested, cleaned, transformed, and prepared for business reporting and analytics.
 
 ---
 
 # 🏗️ Architecture
-
-<img width="1000" alt="Retail Analytics Architecture" src="Retail_Analytics_Architecture.png">
-
----
-
-# 🚀 Project Workflow
 
 ```text
 Data Source
@@ -40,8 +33,17 @@ Silver Layer (Cleaned Data)
 Gold Layer (Business Ready Data)
      │
      ▼
-Analytics & Reporting
+Business Analytics
 ```
+
+### Bronze Layer
+Stores raw data exactly as received from the source system.
+
+### Silver Layer
+Applies data cleaning, validation, and transformation rules to improve data quality.
+
+### Gold Layer
+Creates business-ready datasets for analytics and reporting.
 
 ---
 
@@ -60,25 +62,64 @@ Retail_Analytics_Project/
 
 ---
 
-# 🎯 Key Features
+# 🔄 ETL Pipeline Workflow
 
-✅ Retail Transaction Data Generation
+## Extract
 
-✅ Apache Spark Data Processing
+Generate and ingest raw retail transaction data.
 
-✅ Bronze-Silver-Gold Architecture
+### Sample Fields
 
-✅ Data Cleaning & Validation
+- Transaction ID
+- Customer ID
+- Product ID
+- Quantity
+- Unit Price
+- Discount
+- Order Date
 
-✅ Revenue Calculation
+---
 
-✅ Daily Sales Analytics
+## Transform
 
-✅ Top Customer Analysis
+Data processing performed in the Silver Layer:
 
-✅ Top Product Analysis
+- Remove Null Values
+- Remove Duplicate Records
+- Validate Quantity
+- Validate Unit Price
+- Standardize Data
+- Revenue Calculation
+- Data Quality Checks
 
-✅ Business Ready Datasets
+---
+
+## Load
+
+Store processed data into Gold Layer datasets for analytics.
+
+Generated outputs include:
+
+- Daily Revenue
+- Total Orders
+- Average Order Value
+- Top Customers
+- Top Products
+
+---
+
+# 🎯 Key Data Engineering Concepts Demonstrated
+
+- ETL Pipeline Development
+- Data Ingestion
+- Data Cleaning
+- Data Validation
+- Data Transformation
+- Data Aggregation
+- PySpark Data Processing
+- Medallion Architecture
+- Data Quality Management
+- Business Data Modeling
 
 ---
 
@@ -87,26 +128,23 @@ Retail_Analytics_Project/
 | Technology | Purpose |
 |------------|----------|
 | Python | Programming Language |
-| PySpark | Distributed Processing |
-| Apache Spark | Data Engineering |
-| SQL | Data Manipulation |
-| Parquet | Optimized Storage |
+| PySpark | Data Processing |
+| Parquet | Data Storage |
 | GitHub | Version Control |
-| VS Code | Development |
 
 ---
 
-# 💼 Business Use Case
+# 💼 Business Value
 
-Retail organizations generate thousands of transactions every day.
+This project demonstrates how raw retail transaction data can be transformed into reliable and business-ready datasets.
 
-This project demonstrates how raw sales data can be transformed into trusted datasets for:
+The generated datasets can help organizations:
 
-- Revenue Analysis
-- Customer Analytics
-- Product Performance
-- Business Reporting
-- Executive Dashboards
+- Monitor Sales Performance
+- Analyze Customer Behavior
+- Identify Top-Selling Products
+- Track Revenue Trends
+- Support Business Decision Making
 
 ---
 
@@ -114,22 +152,13 @@ This project demonstrates how raw sales data can be transformed into trusted dat
 
 **Lavi Tarar**
 
-Data Engineer passionate about building scalable ETL pipelines and transforming raw data into meaningful business insights.
+Aspiring Data Engineer with hands-on experience in building ETL pipelines using PySpark and implementing Medallion Architecture for data processing workflows.
 
-### Skills
-
-- Python
-- PySpark
-- SQL
-- Apache Spark
-- Azure
-- Databricks
-- Power BI
-- Data Warehousing
+My focus is on developing scalable data pipelines, improving data quality, and transforming raw data into meaningful business insights.
 
 ---
 
-# 📫 Connect With Me
+# 📫 Contact
 
 ### LinkedIn
 
@@ -145,6 +174,8 @@ lavitarar134@gmail.com
 
 ---
 
-## ⭐ Recruiter Note
+## Recruiter Note
 
-This project demonstrates practical experience in Data Engineering, ETL Development, Apache Spark Processing, Data Quality Management, and Medallion Architecture implementation. The solution showcases how raw retail transaction data can be transformed into reliable business-ready datasets suitable for enterprise analytics and reporting.
+This project showcases my practical understanding of Data Engineering fundamentals, including ETL development, data cleaning, data transformation, data quality validation, and Medallion Architecture implementation using PySpark.
+
+The solution reflects a real-world data processing workflow where raw data is transformed into trusted, business-ready datasets suitable for analytics and reporting.
